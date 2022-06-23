@@ -7,6 +7,7 @@ public class C05_IfElseStatements {
          /*
         Kullanicidan bir karakter girmesini isteyin
         ve girilen karakterin harf olup olmadigini yazdirin
+
          */
 
         Scanner scan = new Scanner(System.in);
