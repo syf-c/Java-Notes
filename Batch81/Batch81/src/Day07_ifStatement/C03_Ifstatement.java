@@ -10,11 +10,11 @@ public class C03_Ifstatement {
         int sayi = -23;
 
         if (sayi > 0)
-            System.out.println("sayi pozitif"); //degere basli
+            System.out.println("sayi pozitif"); //degere bagli
             System.out.println("pozitif kalacaktir");//her zaman calisir
 
         if (sayi % 2 == 0)
-            System.out.println("sayi cift");//degere basli
+            System.out.println("sayi cift");//degere bagli
             System.out.println("cift kalacaktir");//her zaman calisir
 
         if (sayi % 5 == 0)
