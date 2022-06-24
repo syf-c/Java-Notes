@@ -16,10 +16,11 @@ public class C03_NestedIfElseStatement {
         System.out.println("Lutfen cinsiyetinizi yaziniz" +
                 "\n Kadin icin K Erkek icin E harfini giriniz");
         char cinsiyet = scan.next().toUpperCase().charAt(0);
-        System.out.println("Lutfen yasinizi giriniz");
-        double yas = scan.nextDouble();
+
 
         if (cinsiyet == 'E') {
+            System.out.println("Lutfen yasinizi giriniz");
+            double yas = scan.nextDouble();
             if (yas < 0 || yas > 80) {
                 System.out.println("lutfen gecerli bir yas giriniz");
             } else if (yas > 65) {
@@ -30,6 +31,8 @@ public class C03_NestedIfElseStatement {
 
 
         } else if (cinsiyet == 'K') {
+            System.out.println("Lutfen yasinizi giriniz");
+            double yas = scan.nextDouble();
             if (yas < 0 || yas > 80) {
                 System.out.println("lutfen gecerli bir yas giriniz");
             }else if (yas > 60) {
