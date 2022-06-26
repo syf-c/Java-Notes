@@ -1,4 +1,4 @@
-package Day11_StringManipulations;
+package Day12_StringManipulations;
 
 public class ReplaceAndReplaceAll_example {
     public static void main(String[] args) {
