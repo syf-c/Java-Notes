@@ -15,7 +15,7 @@ public class Soru3 {
 
         if (!email.contains("@gmail.com")){
             System.out.println("lutfen gmail adresi giriniz");
-        }else if(email.contains("@gamil.com")){
+        }else if(email.contains("@gmail.com")){
             System.out.println("Email adresiniz kaydedildi");
         }else{
             System.out.println("lutfen yazimi kontrol edin");
