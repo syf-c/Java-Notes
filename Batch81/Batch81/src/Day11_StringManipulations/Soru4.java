@@ -1,5 +1,7 @@
 package Day11_StringManipulations;
 
+import java.util.Scanner;
+
 public class Soru4 {
     public static void main(String[] args) {
         /*
@@ -8,7 +10,9 @@ public class Soru4 {
         her ikisini de iceriyorsa "birini secin" yazdirin
          */
 
-        String cumle = "Bugun bahce cocuklarla dolu";
+        Scanner scan = new Scanner(System.in);
+        System.out.println("lutfen bir cumle yaziniz :");
+        String cumle =scan.nextLine();
 
         if (cumle.contains("buyuk") && cumle.contains("kucuk")) {
             System.out.println("lutfen birini secin");
