@@ -20,7 +20,7 @@ public class C01_indexOf {
         System.out.println(str.indexOf("g",(6+1))); // yazilan indexten baslar
 
         // yukardaki str da 2. ve 3. e'nin indexini bul
-        //2. inci e'yi bulabilmek icin birinci e'nin index'ine ihtiyacim var
+        //2. inci e'yi bulabilmek icin birinci e'nin index'ine ihtiyacim vardir
 
        int ilk_e = str.indexOf("e");
        int ikinci_e = str.indexOf("e", ilk_e+1);
