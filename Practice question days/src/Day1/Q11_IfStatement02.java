@@ -24,7 +24,7 @@ public class Q11_IfStatement02 {
             System.out.println("Notunuz D dir");
         } else if (note <= 79) {
             System.out.println("Notunuz C dir");
-        } else if (note < 89) {
+        } else if (note <= 89) {
             System.out.println("Notunuz B dir");
         } else {
             System.out.println("Notunuz A dir");
