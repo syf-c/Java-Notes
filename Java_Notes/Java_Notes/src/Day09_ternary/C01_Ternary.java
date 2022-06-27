@@ -11,6 +11,6 @@ public class C01_Ternary {
         System.out.println("Lutfen bir sayi giriniz");
         double sayi = scan.nextDouble();
 
-        System.out.println("girdiginie degerin mutlak degeri : "+ (sayi>=0 ? sayi : (-1*sayi)));
+        System.out.println("girdiginie degerin mutlak degeriniz : "+ (sayi>=0 ? sayi : (-1*sayi)));
     }
 }
