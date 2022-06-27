@@ -10,7 +10,7 @@ public class C01_IfElseIfStatement {
         // gun ismi gecerli degilse “Gecerli gun ismi giriniz” yazdirin
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Lutfen bir gun ismi giriniz :");
+        System.out.println("Lutfen bir gun ismi girin :");
         String gun = scanner.nextLine().toLowerCase();
 
         if (gun.equals("pazartesi")) {
