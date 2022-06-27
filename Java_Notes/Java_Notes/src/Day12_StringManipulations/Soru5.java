@@ -13,7 +13,8 @@ public class Soru5 {
         String kelime = scan.next();
 
         if (kelime.length() ==4 ) {
-            System.out.println(kelime.substring(3,4)+kelime.substring(2,3)+kelime.substring(1,2)+kelime.substring(0,1));
+            System.out.println(kelime.substring(3)+kelime.substring(2,3)+kelime.substring(1,2)+kelime.substring(0,1));
+
         }else{
             System.out.println("lutfen 4 harfli bir kelime giriniz");
         }
