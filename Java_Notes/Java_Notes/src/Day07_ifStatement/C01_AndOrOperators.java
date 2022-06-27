@@ -9,6 +9,7 @@ public class C01_AndOrOperators {
         System.out.println(a>0 && b<20 && c>=b);
 
         System.out.println(a<0 && b<20 && c>=b);
+        System.out.println(a<0 && b<20 && c<=b);
 
         /*
         java and operatoru konusunda bize iki secenek sunar
