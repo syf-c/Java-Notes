@@ -17,9 +17,9 @@ public class C01_AndOrOperators {
         ve geriye kalan sartlari incelemez
 
         & : kullanirsak tum sartlar kintrol eder sonra sonucu belirler
-        bu calisma usulunden dolayi  & operatoru && operatorune gore daha yavas olabilir
+        bu calisma usulunden dolayi  & operatoru && operatorune gore daha yavas olabilir.
         */
 
-        System.out.println(a<0 & b<20 & c>=b);
+        System.out.println(a<0 & b<20 & c>=b );
     }
 }
