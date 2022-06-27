@@ -18,7 +18,7 @@ public class Q12_IfStatement03 {
             Scanner scan = new Scanner(System.in);
             System.out.println("Lutfen is unvaninizi giriniz :");
             String jobTitle =scan.nextLine().toLowerCase();
-
+/*
             if (jobTitle.equals("qa")){
                 System.out.println("Quality Analyst");
             }else if (jobTitle.equals("dev")){
@@ -29,6 +29,27 @@ public class Q12_IfStatement03 {
                 System.out.println("Project Manager");
             }else{
                 System.out.println("lutfen gecerli bir unvan giriniz ..");
+            }
+
+ */          switch (jobTitle){
+                case "qa":
+                    System.out.println("Quality Analyst");
+                    break;
+                case "ba":
+                    System.out.println("Business Analyst");
+                    break;
+                case "dev":
+                    System.out.println("Developer");
+                    break;
+                case "pm":
+                    System.out.println("Project Manager");
+                    break;
+                default:
+                    System.out.println("lutfen gecerli bir unvan giriniz ..");
+                    break;
+
+
+
             }
         }
 
