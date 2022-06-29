@@ -19,7 +19,7 @@ public class Q04_NotHesaplama {
        double gecmeNotu = ((vize1+vize2)/2)*0.3 + finalNote*0.7;
 
         System.out.println("gecmeNotu = " + gecmeNotu);
-        
+
         
         
         
