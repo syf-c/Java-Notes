@@ -4,6 +4,16 @@ import java.util.Scanner;
 
 public class C05_MethodCreationReturn {
     public static void main(String[] args) {
+        /*
+          Eger bir class'in icerisinde herhangi bir hesaplama yapip
+          bunu da kalici olarak saklamak istersek
+          kodumuzu sade ve anlasilir tutmak icin
+          islemi bir method'da yapip
+          sonucunu main method'a dondurebiliriz
+          Return type'i void olmayan bir method'un sonucunu
+          main method'da bir variable'a atama yaparsak
+          programin geri kalaninda bu yeni degeri kullanma sansimiz olur
+         */
         //kullanicidan sehir ismini ve dogum tarihini alip
         //bunlari programda kullanacagimiz formatta bize donduren bir method olusturun
         // sehir ismini programimizda buyuk harf olarak,
