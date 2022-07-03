@@ -1,4 +1,4 @@
-package Day1;
+package Day1_and_Day2;
 
 public class Q04_JavaVariable {
     public static void main(String[] args) {
