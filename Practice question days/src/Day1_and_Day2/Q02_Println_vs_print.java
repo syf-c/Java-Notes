@@ -1,4 +1,4 @@
-package Day1;
+package Day1_and_Day2;
 
 public class Q02_Println_vs_print {
      /*
