@@ -16,9 +16,7 @@ public class Soru9 {
 
         String tersten ="";
         for (int i = str.length()-1;i>=0;i--){
-            System.out.println(i);
-
-            // tersten +=str.substring(i,i+1);
+           tersten +=str.substring(i,i+1);
         }
 
         if(tersten.equalsIgnoreCase(str)){
