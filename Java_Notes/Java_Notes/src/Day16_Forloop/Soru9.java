@@ -12,12 +12,16 @@ public class Soru9 {
         System.out.println("Lutfen bir kelime giriniz :");
         String str = scan.nextLine();
 
+
+
         String tersten ="";
         for (int i = str.length()-1;i>=0;i--){
-            tersten +=str.substring(i,i+1);
+            System.out.println(i);
+
+            // tersten +=str.substring(i,i+1);
         }
 
-        if(tersten.equals(str)){
+        if(tersten.equalsIgnoreCase(str)){
             System.out.println("bu kelime Palindrom dur");
         }else {
             System.out.println("degil");
