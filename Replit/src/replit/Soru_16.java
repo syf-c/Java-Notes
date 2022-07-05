@@ -36,13 +36,21 @@ public class Soru_16 {
         System.out.println("Bir ad giriniz");
         String ad=scan.next();
 
-        if(ad.length()==3){
+       /* if(ad.length()==3){
             if(ad.substring(0,1).equalsIgnoreCase(ad.substring(2))){
                 System.out.println("String has duplicate characters");
             }else {
                 System.out.println("String has unique characters");
             }
         }
+
+        */
+        String sonuc = ad.length()==3 ? (ad.substring(0,1).equalsIgnoreCase(ad.substring(2)))
+                ?"Your String has duplicate characters":"Your String has unique characters"
+                : ("");
+        System.out.println(sonuc);
+
+
 
 
     }
