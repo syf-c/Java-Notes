@@ -3,7 +3,7 @@ package replit;
 
 import java.util.Scanner;
 
-public class Soru_15 {
+public class Soru_15_LeapYear {
     // Write a Java program to find the number of days in a month.
     // (Use Switch Case) (Interview Question / Leak Year)
 
