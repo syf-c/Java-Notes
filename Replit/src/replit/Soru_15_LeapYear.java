@@ -64,22 +64,32 @@ public class Soru_15_LeapYear {
 
     }
 
+
     private static boolean artikYillar(int year) {
 
+        if ((year % 100 == 0 && year % 400 == 0) || (year % 100 != 0 && year % 4 == 0)) {
+            return true; //System.out.println("Artik Yil");
+        } else {
+           return false; //System.out.println("") System.out.println("Artik Yil Degil..!");
+        }
+    }
+}
+/*
         if (year % 4 == 0) {
             if (year % 100 != 0) {
                 return true;
 
-            } else if (year % 400 == 0) {
+            } else if (year % 400 != 0) {
 
                 return false;
+            }else{
+                return true;
             }
+
         } else {
             return false;
         }
-        return false;
-    }
-}
+*/
 
 
 
