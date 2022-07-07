@@ -1,4 +1,4 @@
-package Day18_WhileLoop;
+package Day18_Do_WhileLoop;
 
 public class C05_Do_WhileLoop {
     /*
