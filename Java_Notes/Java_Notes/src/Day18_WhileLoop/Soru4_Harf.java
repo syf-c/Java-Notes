@@ -1,4 +1,4 @@
-package Day18_While_Do_WhileLoop;
+package Day18_WhileLoop;
 
 public class Soru4_Harf {
     /*

@@ -1,4 +1,4 @@
-package Day18_While_Do_WhileLoop;
+package Day18_WhileLoop;
 
 public class Soru1_Tek_Sayi {
     //While loop kullanarak 3 den 13 e kadar tum tek tamsayilari ekrana yazdiriniz
