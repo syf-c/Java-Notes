@@ -20,10 +20,6 @@ girdiginde "Sifreniz Kabul edilmistir" yazdirin.
         System.out.println("Lutfen bir sifre giriniz");
         String sifre = scan.nextLine();
         int kontrol = 0;
-        String sonuc1 = "";
-        String sonuc = "";
-
-
         boolean basari=false;
         // ilk harf kontrolu
         do {
@@ -32,10 +28,11 @@ girdiginde "Sifreniz Kabul edilmistir" yazdirin.
 
             for (int i =1; i >= sifre.length(); i++) {
 
+                String sonuc = "";
                 sonuc = sifre.substring(i-1, i);
                 if (sonuc.indexOf(0,sonuc.length()-1) >= 'A' && sonuc.indexOf(0,sonuc.length()-1) <= 'Z') {
                     kontrol++;
-                    break;
+
                 } else {
                     System.out.println("buyuk karakter icermeli");
 
@@ -81,7 +78,7 @@ girdiginde "Sifreniz Kabul edilmistir" yazdirin.
             // son harf kontrolu
 
             for (int i =1; i >=sifre.length() ; i++) {
-
+                String sonuc1 = "";
                 sonuc1 = sifre.substring(i-1, i);
                 if (sonuc1.indexOf(0,sonuc1.length()-1) >= 'a' && sonuc1.indexOf(0,sonuc1.length()-1) <= 'z') {
                     kontrol++;
@@ -103,7 +100,7 @@ girdiginde "Sifreniz Kabul edilmistir" yazdirin.
 
         */
             // bosluk kontrolu
-            System.out.println(kontrol);
+
             if (sifre.contains(" ")) {
                 kontrol++;
             } else {
@@ -121,18 +118,18 @@ girdiginde "Sifreniz Kabul edilmistir" yazdirin.
             }
             if (kontrol == 4) {
                 System.out.println("Sifre basari ile tanimlandi");
-                basari=true;
+
+
             } else {
                 System.out.println("Islem basarisiz,Lutfen yeni bir sifre girin");
                 kontrol=0;
-                basari=true;
-                sonuc="";
-                sonuc1="";
+
+
 
 
             }
 
-        } while (!basari);
+        } while (kontrol!=4);
     }
 }
 

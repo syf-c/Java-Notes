@@ -5,10 +5,10 @@ public class Harf_iceriyor_Mu {
         String sifre ="Musa";
         String sonuc ="";
 
-        for (int i = 0; i <sifre.length() ; i++) {
+        for (int i = 0; i <=sifre.length() ; i++) {
             sonuc=sifre.substring(i,i+1)+"";
-            if(sonuc.charAt(0)>='A'&& sonuc.charAt(0)<='Z'){
-
+            if(sonuc.charAt(i)>='A'&& sonuc.charAt(i)<='Z'){
+                System.out.println("basarili");
                 break;
             }
 
@@ -18,9 +18,8 @@ public class Harf_iceriyor_Mu {
 
         for (int i = sifre.length()-1; i >=0 ; i++) {
             sonuc=sifre.substring(i,i+1);
-            if(sonuc.charAt(sonuc.length()-1)>='a'&& sonuc.charAt(sonuc.length()-1)<='z'){
-
-                break;
+            if(sonuc.charAt(i)>='a'&& sonuc.charAt(i)<='z'){
+                System.out.println("basarili");
             }
             System.out.println("gerekli");
             break;
