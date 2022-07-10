@@ -31,14 +31,14 @@ girdiginde "Sifreniz Kabul edilmistir" yazdirin.
                 String sonuc = "";
                 sonuc = sifre.substring(i-1, i);
                 if (sonuc.indexOf(0,sonuc.length()-1) >= 'A' && sonuc.indexOf(0,sonuc.length()-1) <= 'Z') {
-                    kontrol++;
+                   break;
 
                 } else {
                     System.out.println("buyuk karakter icermeli");
 
                     break;
                 }
-            }
+            } kontrol++;
 
 
 
@@ -81,7 +81,7 @@ girdiginde "Sifreniz Kabul edilmistir" yazdirin.
                 String sonuc1 = "";
                 sonuc1 = sifre.substring(i-1, i);
                 if (sonuc1.indexOf(0,sonuc1.length()-1) >= 'a' && sonuc1.indexOf(0,sonuc1.length()-1) <= 'z') {
-                    kontrol++;
+
                     break;
                 } else {
                     System.out.println("kucuk karakter icermeli");
@@ -89,7 +89,7 @@ girdiginde "Sifreniz Kabul edilmistir" yazdirin.
                     break;
                 }
 
-            }
+            }kontrol++;
 
 
        /* if (sifre.charAt(sifre.length() - 1) >= 'a' && sifre.charAt(sifre.length() - 1) <= 'z') {
