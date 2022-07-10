@@ -1,4 +1,4 @@
-public class QA_02 {
+public class QA02_TamSayilar {
    /* 2---1 den 20 ye kadar tam sayıları alt alta yazan Java kodu yazınız.
     Hint: For döngüsü kullanınız.
     Beklenen Çıktı:
