@@ -1,4 +1,4 @@
-public class QA_01 {
+public class QA01_RakamlarToplami {
     /*
     1---Sayının Rakamlar toplaminı bulan Java kodu yazınız.
 
