@@ -1,4 +1,4 @@
-public class QA_03 {
+public class QA03_CarpimTablosu {
     /*
     3----elirlenen sayının 1 den 10 a kadar çarpım sonuçlarını yapan Java programını yazınız.
     Örnek Sonuç:
