@@ -29,22 +29,20 @@ public class QA06_SesliHarf_SessizHarf {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("harf giriniz");
-        String harf= scan.next();
-        if(harf.length()==1) {
-            if (harf.equals("a") || harf.equals("e") || harf.equals("i") || harf.equals("o") || harf.equals("u")) {
-                System.out.println(harf + " sesli harf");
-            } else {
-                System.out.println(harf + " sessiz harf");
-            }
-        }else {
-                System.out.println("yanlis karakter girdiniz");
-            }
-
-
-
-
-
-
+        System.out.println("input giriniz");
+        String input = scan.next().toLowerCase();
+        boolean uppercase = input.charAt(0) >=65 && input.charAt(0) <= 90;
+        boolean lowercase = input.charAt(0) >= 97 && input.charAt(0) <= 122;
+        boolean vowels = input.equals("a") || input.equals("e") || input.equals("i")
+                || input.equals("o") || input.equals("u");
+        if (input.length() > 1) {
+            System.out.println("Error. Not a single character.");
+        } else if (!(uppercase || lowercase)) {
+            System.out.println("Error. Not a letter. Enter uppercase or lowercase letter.");
+        } else if (vowels) {
+            System.out.println(input + " Letter is Vowel");
+        } else {
+            System.out.println(input + " letter is Consonant");
+        }
     }
 }
