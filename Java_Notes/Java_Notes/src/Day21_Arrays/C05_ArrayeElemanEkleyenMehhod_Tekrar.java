@@ -14,7 +14,7 @@ public static void main(String[] args) {
     System.out.println(Arrays.toString(sinifList));
 }
 
-    private static String[] ArrayElemanEkle(String[] sinifList, String eklenecekIsim) {
+    public static String[] ArrayElemanEkle(String[] sinifList, String eklenecekIsim) {
         String[] yeniSinifListesi =new String[sinifList.length+1];
         for (int i = 0; i <sinifList.length ; i++) {
            yeniSinifListesi[i]=sinifList[i];
