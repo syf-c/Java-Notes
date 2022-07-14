@@ -10,8 +10,8 @@ public static void main(String[] args) {
     String[] sinifList={"Ali Can","Nida yucedal","Musa yaman"};
     String eklenecekIsim="Musa Gurbuz";
 
-    String[] sonuc=ArrayElemanEkle(sinifList,eklenecekIsim);
-    System.out.println(Arrays.toString(sonuc));
+   sinifList=ArrayElemanEkle(sinifList,eklenecekIsim);
+    System.out.println(Arrays.toString(sinifList));
 }
 
     private static String[] ArrayElemanEkle(String[] sinifList, String eklenecekIsim) {
