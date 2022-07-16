@@ -11,7 +11,7 @@ public class Q11_Odev {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("************** HOSGELDINIZ **********");
-        while(true){
+        while(girisHakki>0){
             System.out.println("pin kodunuzu giriniz :");
             String girilenPin = scan.nextLine();
             if(pin.equals(girilenPin)){
