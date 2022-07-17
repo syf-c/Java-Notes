@@ -18,7 +18,8 @@ public class C03_Mda_IstenenSayilariYazdirma {
 
                 if(i==j){
                     istenenToplam +=sayilar[i][j];
-                }System.out.println(i+" "+j+" "+ " istenen Toplam = " + istenenToplam);
+                    System.out.println(i+" "+j+ " istenen Toplam = " + istenenToplam);
+                }
 
             }
         }
