@@ -10,11 +10,17 @@ public class QA22_cumleyiiTers_amaDuzgun {
      */
 
     public static void main(String[] args) {
-        String str="Java is fun";
+        String str="Java is fun .";
+        str=str.replace(" ","azerty").replaceAll("\\W", "").replace("azerty", " ");
+
         String arr[]=str.split(" ");
+
         System.out.println(str);
         for (int i = arr.length-1; i >=0 ; i--) {
             System.out.print(arr[i]+" ");
         }
+
+
+
     }
 }
