@@ -11,15 +11,20 @@ public class Q03_MDArray {
      */
     public static void main(String[] args) {
         int[][] input= {{1,3,6},{2,8},{5,7,9,14}};
-        int sonuc=0;
-        for (int i = 0; i < input.length ; i++) {
-            for (int j = 0; j <input[i].length ; j++) {
-              if(input[i][j]%2==0){
-                  sonuc+=input[i][j];
-              }
+        sumEven(input);
+        System.out.println("sum of even numbers = " + sumEven(input));
+    }
+
+    private static int sumEven(int[][] input) {
+        int sum =0;
+        for (int[] each1:input) {
+            for (int each2:each1) {
+                if(each2%2==0){
+                    sum +=each2;
+                }
             }
         }
-        System.out.println("Arraydeki cift sayilarin toplami : "+sonuc);
+      return sum;
     }
 
 }
