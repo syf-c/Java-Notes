@@ -12,6 +12,7 @@ public class Sepet {
         if (secim.equals("Y") || secim.equals("y")) {
             krediKartBilgileri();
             System.out.println("Odemeniz Basarili bir sekil de yapilmistir");
+            projeyiDurdur();
         } else if (secim.equals("N") || secim.equals("n")) {
             System.out.println("Sectiginiz urunleri iptal edilmismir");
             System.out.println("cikis yapmak icin 'Q' ya bisiniz");
@@ -26,7 +27,7 @@ public class Sepet {
 
     }
 
-    private static void projeyiDurdur() {
+    public static void projeyiDurdur() {
         System.out.println("Basrilli Marketi ziyaret ettiginiz icin Tesekkur ederiz :)");
     }
 
