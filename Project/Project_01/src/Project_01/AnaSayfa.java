@@ -48,8 +48,9 @@ public class AnaSayfa {
                 case "Q":
                     break;
                 default:
-                    System.out.println("lutfen gecerli bir numara giriniz");
+                    System.out.println("lutfen gecerli bir numara giriniz. Eger cikmak isterseniz 'Q' ya basiniz");
             }
         } while (!secim.equalsIgnoreCase("q"));
+        Sepet.projeyiDurdur();
     }
 }
