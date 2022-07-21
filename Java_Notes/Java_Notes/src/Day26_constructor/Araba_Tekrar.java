@@ -23,5 +23,15 @@ public class Araba_Tekrar {
         this.yil = yil;
     }
 
+    @Override
+    public String toString() {
+        return "Araba_Tekrar{" +
+                "marka='" + marka + '\'' +
+                ", model='" + model + '\'' +
+                ", yil=" + yil +
+                ", fiyat=" + fiyat +
+                '}';
+    }
+
 
 }
