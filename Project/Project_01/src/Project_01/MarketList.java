@@ -6,4 +6,13 @@ public class MarketList {
         Market.urunSec();
 
     }
+    public static void Sarkuteri(){
+        Sarkuteri.urunListesi();
+        Sarkuteri.urunSec();
+    }
+    public static void Manav(){
+        Manav.urunListesi();
+        Manav.urunSec();
+    }
+
 }
