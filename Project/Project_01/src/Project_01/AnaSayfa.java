@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class AnaSayfa {
 
     public static void main(String[] args) {
+        bolumler();
+    }
+        public static void bolumler() {
+
 
         String secim;
         do {
@@ -23,6 +27,8 @@ public class AnaSayfa {
             System.out.println(" 02 ---Sarkuteri");
             System.out.println(" 03 ---Market");
 
+            System.out.println("\"Q\" ---Cikis");
+
 
             System.out.println(" ========================");
 
@@ -38,11 +44,11 @@ public class AnaSayfa {
                     break;
                 case "02":
                 case "2":
-                    System.out.println("Sarkuteri suanda hazir degil");
+                    MarketList.Sarkuteri();
                     break;
                 case "03":
                 case "3":
-                    System.out.println("Market suanda hazir degil");
+                    MarketList.Manav();
                     break;
                 case "q":
                 case "Q":
@@ -52,5 +58,8 @@ public class AnaSayfa {
             }
         } while (!secim.equalsIgnoreCase("q"));
         Sepet.projeyiDurdur();
+
     }
+
+
 }
