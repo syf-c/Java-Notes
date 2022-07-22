@@ -8,10 +8,10 @@ public class QA08_TerstenYaz {
     avaj
      */
     public static void main(String[] args) {
-        String str="java";
+        String str="java is fun";
         String sonuc="";
         for (int i = str.length()-1; i >=0 ; i--) {
-            sonuc+=str.substring(i,i+1);
+            sonuc+=str.charAt(i);
         }
         System.out.println(sonuc);
     }
