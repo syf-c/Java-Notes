@@ -16,10 +16,12 @@ public class Soru1 {
 
         tekmiCiftmi(sayi);
         sifirdanBuyKuc(sayi);
-        yudenBuyKuc(sayi);
+        System.out.println(yudenBuyKuc(sayi));
+        int yuzlerbas= yudenBuyKuc(sayi);
+        System.out.println(yuzlerbas);
     }
 
-    private static void yudenBuyKuc(int sayi) {
+    private static int yudenBuyKuc(int sayi) {
         int rakamToplami =0;
         int birlerBas =0;
 
@@ -28,11 +30,11 @@ public class Soru1 {
                 birlerBas = sayi%10;
                 rakamToplami += birlerBas;
                 sayi /=10;
-           }System.out.println("Rakamlar toplami : " + rakamToplami);
+           }return rakamToplami;
 
         }else {
             birlerBas = sayi%10;
-            System.out.println("Birler basamagi : "+birlerBas);
+            return birlerBas;
         }
     }
 
