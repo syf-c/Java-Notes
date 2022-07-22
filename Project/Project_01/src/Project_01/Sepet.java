@@ -3,10 +3,11 @@ package Project_01;
 import java.util.Scanner;
 
 public class Sepet {
+
     public static void sepet() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Aldiginiz Urunler : " + Market.alinanUrunler);
-        System.out.println("Toplam Odenecek ucret  : " + Market.toplamOdenecekPara +"$");
+        System.out.printf("Toplam Odenecek ucret  : %.2f$\n ", Market.toplamOdenecekPara);
         System.out.println("Alis verisinizi Tamamlamak ister misiniz? Y/N");
         String secim = scan.next();
         if (secim.equals("Y") || secim.equals("y")) {
@@ -19,13 +20,74 @@ public class Sepet {
             String secimCik = scan.next();
             if (secimCik.equals("Q") || secimCik.equals("q")) {
                 projeyiDurdur();
+
+
             }
         } else {
             System.out.println("Basrilli Marketi ziyaret ettiginiz icin Tesekkur ederiz");
+            System.out.println("cikis yapmak icin 'Q' tusuna basiniz ");
+            projeyiDurdur();
         }
 
 
     }
+    public static void sepetSarkuteri() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Aldiginiz Urunler : " + Sarkuteri.alinanUrunler);
+        System.out.printf("Toplam Odenecek ucret  : %.2f$\n ", Sarkuteri.toplamOdenecekPara);
+        System.out.println("Alis verisinizi Tamamlamak ister misiniz? Y/N");
+        String secim = scan.next();
+        if (secim.equals("Y") || secim.equals("y")) {
+            krediKartBilgileri();
+            System.out.println("Odemeniz Basarili bir sekil de yapilmistir");
+            projeyiDurdur();
+        } else if (secim.equals("N") || secim.equals("n")) {
+            System.out.println("Sectiginiz urunleri iptal edilmismir");
+            System.out.println("cikis yapmak icin 'Q' ya bisiniz");
+            String secimCik = scan.next();
+            if (secimCik.equals("Q") || secimCik.equals("q")) {
+                projeyiDurdur();
+
+
+            }
+        } else {
+            System.out.println("Basrilli Marketi ziyaret ettiginiz icin Tesekkur ederiz");
+            System.out.println("cikis yapmak icin 'Q' tusuna basiniz ");
+            projeyiDurdur();
+        }
+
+
+    }
+
+    public static void sepetManav() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Aldiginiz Urunler : " + Manav.alinanUrunler);
+        System.out.printf("Toplam Odenecek ucret  : %.2f$\n ", Manav.toplamOdenecekPara);
+        System.out.println("Alis verisinizi Tamamlamak ister misiniz? Y/N");
+        String secim = scan.next();
+        if (secim.equals("Y") || secim.equals("y")) {
+            krediKartBilgileri();
+            System.out.println("Odemeniz Basarili bir sekil de yapilmistir");
+            projeyiDurdur();
+        } else if (secim.equals("N") || secim.equals("n")) {
+            System.out.println("Sectiginiz urunleri iptal edilmismir");
+            System.out.println("cikis yapmak icin 'Q' ya bisiniz");
+            String secimCik = scan.next();
+            if (secimCik.equals("Q") || secimCik.equals("q")) {
+                projeyiDurdur();
+
+
+            }
+        } else {
+            System.out.println("Basrilli Marketi ziyaret ettiginiz icin Tesekkur ederiz");
+            System.out.println("cikis yapmak icin 'Q' tusuna basiniz ");
+            projeyiDurdur();
+        }
+
+
+    }
+
+
 
     public static void projeyiDurdur() {
         System.out.println("Basrilli Marketi ziyaret ettiginiz icin Tesekkur ederiz :)");
