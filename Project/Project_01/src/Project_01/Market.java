@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Market {
-    static List<String> urunListesi = new ArrayList<String>();
+    static List<String> urunListesi = new ArrayList<>();
     static List<Double> urunFiyatlariListesi = new ArrayList<>();
     static List<Integer> UrunNoListesi = new ArrayList<>();
 
@@ -16,7 +16,6 @@ public class Market {
 
 
     public static void urunListesi() {
-
 
         System.out.println(" ========================");
         System.out.println("  No    Urun       Fiyat");
@@ -41,8 +40,6 @@ public class Market {
         for (int i = 0; i < UrunNo.length; i++) {
             UrunNoListesi.add(UrunNo[i]);
         }
-
-
     }
 
 
@@ -52,12 +49,11 @@ public class Market {
         System.out.println("Lutfen istediginiz urun numarasini giriniz :");
         int No = scan.nextInt();
         double odencekFiyat = 0;
-        if ((No < 0 || No > UrunNoListesi.size()-1)) {
+        if ((No < 0 || No > UrunNoListesi.size() - 1)) {
             System.out.println("Lutfen gecerli bir numara giriniz");
             urunSec();
 
-        }
-        else{
+        } else {
 
             for (int i = 0; i < UrunNoListesi.size(); i++) {
 
@@ -66,17 +62,18 @@ public class Market {
                     double kilogram = scan.nextDouble();
                     odencekFiyat = (kilogram * urunFiyatlariListesi.get(i));
                     toplamOdenecekPara += odencekFiyat;
-                    alinanUrunler += urunListesi.get(i) + ", ";
+                    alinanUrunler += urunListesi.get(i);
                     System.out.printf("%.2f kg  %s  %.2f $\n", kilogram, urunListesi.get(i), odencekFiyat);
 
                     System.out.println("Baska bir urun almak istermisiniz   Y / N");
                     String secim = scan.next();
                     if (secim.equals("Y") || secim.equals("y")) {
+                        AnaSayfa.bolumler();
                         urunListesi();
                         urunSec();
                     } else if (secim.equals("N") || secim.equals("n")) {
                         Sepet.sepet();
-                        break ;
+                        break;
 
                     } else {
                         System.out.println("Lutfen Y veya N seciniz");
@@ -85,9 +82,6 @@ public class Market {
                 }
             }
         }
-
-
-
     }
 }
 
