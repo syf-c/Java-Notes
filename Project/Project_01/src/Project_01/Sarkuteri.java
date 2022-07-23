@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Sarkuteri {
 
-
     static List<String> urunListesi = new ArrayList<String>();
     static List<Double> urunFiyatlariListesi = new ArrayList<>();
     static List<Integer> UrunNoListesi = new ArrayList<>();
@@ -17,7 +16,6 @@ public class Sarkuteri {
 
 
     public static void urunListesi() {
-
 
         System.out.println(" ========================");
         System.out.println("  No    Urun       Fiyat");
@@ -42,8 +40,6 @@ public class Sarkuteri {
         for (int i = 0; i < UrunNo.length; i++) {
             UrunNoListesi.add(UrunNo[i]);
         }
-
-
     }
 
     public static void urunSec() {
@@ -65,7 +61,7 @@ public class Sarkuteri {
                     double kilogram = scan.nextDouble();
                     odencekFiyat = (kilogram * urunFiyatlariListesi.get(i));
                     toplamOdenecekPara += odencekFiyat;
-                    alinanUrunler += urunListesi.get(i) + ", ";
+                    alinanUrunler += urunListesi.get(i);
                     System.out.printf("%.2f kg  %s  %.2f $\n", kilogram, urunListesi.get(i), odencekFiyat);
 
                     System.out.println("Baska bir urun almak istermisiniz   Y / N");
@@ -75,7 +71,7 @@ public class Sarkuteri {
                         urunListesi();
                         urunSec();
                     } else if (secim.equals("N") || secim.equals("n")) {
-                        Sepet.sepetSarkuteri();
+                        Sepet.sepet();
                         break;
 
                     } else {
