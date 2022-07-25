@@ -14,23 +14,47 @@ public class Soru_01_enFazlaOlanKarakter {
     maximum occurring character is : a
      */
     public static void main(String[] args) {
-        String input = "Learning java is easy";
-        input = input.replaceAll(" ", "");
-        String[] arr = input.split("");
+        //  Write a Java program to get a String from user as input and find the maximum occurring character in that string. (Ignore case sensitivity)
 
+        //  input :
+
+        //  Learning java is easy
+
+        //  output:
+
+        //  maximum occurring character is : a
+
+        String input="Learning java is easyLLLL";
+        input=input.replaceAll("\\s","");
+
+        String[]arr=input.split("");
         Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
 
-        List<String> repeated = new ArrayList<String>();
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i + 1; j < arr.length; j++) {
+        List<String> liste=new ArrayList<>();
+        int sayac=0;
+        int max=0;
+        String maxArr=arr[0];
+        for (int i = 0; i < arr.length-1 ; i++) {
+            if(arr[i].equalsIgnoreCase(arr[i+1])&&!liste.contains(arr[i])){
 
-                if (arr[i].equalsIgnoreCase(arr[j]) && !repeated.contains(arr[i])) {
-                    repeated.add(arr[i]);
+                liste.add(++sayac+arr[i]);
+
+                if (sayac>max){
+                    max=sayac;
+                    maxArr=arr[i];
                 }
             }
-        }
-        System.out.println(repeated);
+
+              else {
+                sayac=0;
+
+            }
+        } System.out.println("En fazla Harf :"+maxArr);
+        System.out.println("Harf sayisi :"+(++max));
+
+
 
     }
-}
+
+    }
+
