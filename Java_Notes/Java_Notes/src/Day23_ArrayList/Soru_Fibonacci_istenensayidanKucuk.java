@@ -30,8 +30,8 @@ public class Soru_Fibonacci_istenensayidanKucuk {
 
 
             }
-            fibonacci.add(0,0);
-            fibonacci.add(1,1);
+            fibonacci.add(0,1);
+
 
         System.out.println(fibonacci);
 
