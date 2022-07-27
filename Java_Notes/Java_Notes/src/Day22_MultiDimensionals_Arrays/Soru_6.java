@@ -17,7 +17,7 @@ public class Soru_6 {
 
         int[] sayilar = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         System.out.println(Arrays.toString(sayilar));
-        int[] yeniList = new int[sayilar.length];
+        int[] yeniList = new int[sayilar.length-1];
 
         for (int i = 0; i < sayilar.length; i++) {
             if (sayilar[i] != istenen) {
