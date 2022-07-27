@@ -24,35 +24,32 @@ public class Soru_01_enFazlaOlanKarakter {
 
         //  maximum occurring character is : a
 
-        String input="Learning java is easyLLLL";
+        String input="Learning java is eeeeeeeeasy";
         input=input.replaceAll("\\s","");
+        input =input.toLowerCase();
 
-        String[]arr=input.split("");
+        String[] arr=input.split("");
         Arrays.sort(arr);
-
-        List<String> liste=new ArrayList<>();
+        System.out.println(Arrays.toString(arr));
         int sayac=0;
-        int max=0;
-        String maxArr=arr[0];
-        for (int i = 0; i < arr.length-1 ; i++) {
-            if(arr[i].equalsIgnoreCase(arr[i+1])&&!liste.contains(arr[i])){
-
-                liste.add(++sayac+arr[i]);
-
-                if (sayac>max){
-                    max=sayac;
-                    maxArr=arr[i];
+        int enFazla=0;
+        String enFazlaKullanilanHarf="";
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = 0; j < arr.length ; j++) {
+                if (arr[i].equals(arr[j])) {
+                    sayac++;
                 }
             }
 
-              else {
+            if (sayac > enFazla) {
+                enFazla = sayac;
+                enFazlaKullanilanHarf = arr[i];
                 sayac=0;
+            } else sayac=0;
 
-            }
-        } System.out.println("En fazla Harf :"+maxArr);
-        System.out.println("Harf sayisi :"+(++max));
-
-
+        }
+        System.out.println("maximum occurring character is " + enFazlaKullanilanHarf);
+        System.out.println("Kullanma sayisi :" + enFazla);
 
     }
 
