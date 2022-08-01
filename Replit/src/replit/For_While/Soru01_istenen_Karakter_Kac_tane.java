@@ -3,7 +3,7 @@ package replit.For_While;
 
 import java.util.Scanner;
 
-public class istenen_Karakter_Kac_tane {
+public class Soru01_istenen_Karakter_Kac_tane {
     public static void main(String[] args) {
         /*
         Kullanıcıdan bir isim ve bir karakter girmesini isteyin, ardından isimdeki döngüleri kullanarak karakterin isimde kaç kez tekrarlandığını kontrol edin.
@@ -33,7 +33,7 @@ public class istenen_Karakter_Kac_tane {
                     sayac++;
                 }
             }
-        System.out.println(istenen+""+sayac);
+        System.out.println(istenen+" = "+sayac);
 
     }
 
