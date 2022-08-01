@@ -1,8 +1,6 @@
 package replit.For_While;
 
-import java.util.Scanner;
-
-public class Obeb_Okek {
+public class Soru02_Obeb_Okek {
     public static void main(String[] args) {
         /*
         Kullanıcıdan 2 tamsayı girmesini ve ardından GCD (En Büyük Ortak Bölen) ve LCM'yi (En Küçük Ortak Kat) bulmasını isteyin
