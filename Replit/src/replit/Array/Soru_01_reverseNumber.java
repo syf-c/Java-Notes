@@ -19,12 +19,12 @@ public class Soru_01_reverseNumber {
 
     private static void reverseNumber(int input) {
         int birlerBas = 0;
-
         String container = "";
         while (input != 0) {
             birlerBas = input % 10;
 
-            container = birlerBas + "";
+            container = container+birlerBas;
+
             input /= 10;
             System.out.print(container);
         }
