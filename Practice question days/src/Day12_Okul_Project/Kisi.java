@@ -40,11 +40,10 @@ public class Kisi {
 
     @Override
     public String toString() {
-        return "Kisi{" +
-                "adSoyad='" + adSoyad + '\'' +
-                ", kimlikNo='" + kimlikNo + '\'' +
-                ", yas=" + yas +
-                '}';
+        return
+                "\nAd Soyad      = " + adSoyad +
+                "\nKimlik No     = " + kimlikNo +
+                "\nYas           = " + yas ;
     }
 }
 
