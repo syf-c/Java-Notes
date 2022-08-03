@@ -59,11 +59,11 @@ public class Islemler {
                 islemMenusu();
                 break;
             case 2:
-              //  arama();
+                arama();
                 islemMenusu();
                 break;
             case 3:
-              //  listeleme();
+                listeleme();
                 islemMenusu();
                 break;
             case 4:
@@ -86,12 +86,23 @@ public class Islemler {
 
     }
 
+    private static void arama() {
+        if (kisiTuru.equals("OGRENCI")){ //TODO SONRA DOLDUR
+
+        }else{
+           String arama=scan.nextLine();
+
+
+        }
+
+    }
+
+
     private static void ekle() { //Bu metod hem ogrenci hemde ogretmen eklemek icin tasarlandi
         System.out.println("***** " +kisiTuru + " Ekleme Sayfasina Hosgeldiniz *****");
         System.out.println("isim ve soyisim giriniz :");
         scan.nextLine();
         String adSoyad = scan.nextLine();
-
 
         System.out.println("kimlik No giriniz :");
         String kimlikNo = scan.nextLine();
@@ -110,14 +121,11 @@ public class Islemler {
             String sicilNo = scan.nextLine();
             Ogretmen ogretmen= new Ogretmen(adSoyad,kimlikNo,yas,bolum,sicilNo);
             ogretmenList.add(ogretmen);
-            System.out.println(ogretmenList);
 
         }
-
-
-
-
-
-
     }
+    private static void listeleme() {
+        System.out.println(ogretmenList);
+    }
+
 }
