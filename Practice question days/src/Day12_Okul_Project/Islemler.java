@@ -67,15 +67,15 @@ public class Islemler {
                 islemMenusu();
                 break;
             case 4:
-             //   silme();
-                girisPaneli();
+                silme();
+                islemMenusu();
                 break;
             case 5:
              //   anaMenu();
-                islemMenusu();
+                girisPaneli();
                 break;
             case 0:
-                //cikis();
+                cikis();
                 break;
            default :
                System.out.println("gecerli bir bolum seciniz");
@@ -86,46 +86,131 @@ public class Islemler {
 
     }
 
+    private static void cikis() {
+        System.out.println("Yine bekleriz Hoscakalin");
+    }
+
+    private static void silme() {
+        System.out.println("***** " +kisiTuru + " Listeleme Sayfasina Hosgeldiniz *****");
+        boolean flag = true;
+
+        if (kisiTuru.equalsIgnoreCase("OGRENCI")){
+            System.out.println("Silmek icin Kimlik No giriniz :");
+            String silinecekKimlikNo = scan.next().replaceAll(" ","");
+            for (Kisi each:ogrenciList) {
+                if (each.getKimlikNo().equals(silinecekKimlikNo)){
+                    System.out.println("Silininen Ogrenci"+ each.getAdSoyad());
+                    ogrenciList.remove(each);
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag){
+                System.out.println("Aragiginiz TC numarali ogrenci yok");
+            }
+        }else{
+                System.out.println("Silinecek ogretmnenin Kimlik No giriniz :");
+                String silinecekKimlikNo = scan.next().replaceAll(" ","");
+                for (Kisi each:ogretmenList) {
+                    if (each.getKimlikNo().equals(silinecekKimlikNo)){
+                        System.out.println("Silininen Ogretmen "+ each.getAdSoyad());
+                        ogretmenList.remove(each);
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag){
+                    System.out.println("Aragiginiz TC numarali Ogretmen yok ve silinemedi");
+                }
+        }
+    }
+
+    private static void listeleme() {
+        System.out.println("***** " +kisiTuru + " Listeleme Sayfasina Hosgeldiniz *****");
+        if (kisiTuru.equalsIgnoreCase("OGRENCI")){
+            System.out.println(ogretmenList);
+        }else{
+            for (Kisi w:ogretmenList){
+                System.out.println(w.toString());
+            }
+        }
+    }
+
     private static void arama() {
-        if (kisiTuru.equals("OGRENCI")){ //TODO SONRA DOLDUR
+        System.out.println("***** " +kisiTuru + " Arama Sayfasina Hosgeldiniz *****");
+        boolean flag = true;
+
+        if (kisiTuru.equalsIgnoreCase("OGRENCI")){ //Bu satirda ogrenci araniyor
+            System.out.println("Kimlik no giriniz : ");
+           String aranankimlikNo = scan.next().replaceAll(" ","");
+            for (Kisi w : ogrenciList) {
+                if (w.getKimlikNo().equals(aranankimlikNo)){
+                    System.out.println("Aradiginiz ogrenci : "+ w.getAdSoyad());
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag){
+                System.out.println("Aragiginiz TC numarali ogrenci yok");
+
+            }
 
         }else{
-           String arama=scan.nextLine();
 
+            System.out.println("Kimlik no giriniz : ");
+            String aranankimlikNo = scan.next().replaceAll(" ","");
+            for (Kisi w : ogretmenList) {
+                if (w.getKimlikNo().equals(aranankimlikNo)){
+                    System.out.println("Aradiginiz ogretmen : "+ w.getAdSoyad());
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag){
+                System.out.println("Aragiginiz TC numarali ogretmen yok");
+
+            }
 
         }
 
     }
 
-
     private static void ekle() { //Bu metod hem ogrenci hemde ogretmen eklemek icin tasarlandi
         System.out.println("***** " +kisiTuru + " Ekleme Sayfasina Hosgeldiniz *****");
-        System.out.println("isim ve soyisim giriniz :");
+        System.out.println("Isim ve Soyisim giriniz : ");
         scan.nextLine();
         String adSoyad = scan.nextLine();
 
-        System.out.println("kimlik No giriniz :");
+        System.out.println("Kimlik No giriniz :");
         String kimlikNo = scan.nextLine();
 
         System.out.println("Yasinizi giriniz :");
         int yas= scan.nextInt();
 
         if (kisiTuru.equals("OGRENCI")){ //TODO SONRA DOLDUR
+            System.out.println("ogrenci No giriniz");
+            String ogrenciNo = scan.next().replaceAll(" ","");
+
+            System.out.println("Sinifi giriniz :");
+            String sinif = scan.next().replaceAll(" ","");
+
+            Ogrenci ogrenci = new Ogrenci(adSoyad,kimlikNo,yas,ogrenciNo,sinif);
+            ogretmenList.add(ogrenci);
+
 
         }else{
-            scan.nextLine();
-            System.out.println("Bolum giriniz");
+            scan.nextLine(); //dummy kod hata almamak icin
+            System.out.println("Bolum giriniz : ");
             String bolum = scan.nextLine();
 
-            System.out.println("SicilNo giriniz");
+            System.out.println("SicilNo giriniz : ");
             String sicilNo = scan.nextLine();
+
             Ogretmen ogretmen= new Ogretmen(adSoyad,kimlikNo,yas,bolum,sicilNo);
             ogretmenList.add(ogretmen);
 
         }
     }
-    private static void listeleme() {
-        System.out.println(ogretmenList);
-    }
+
 
 }
