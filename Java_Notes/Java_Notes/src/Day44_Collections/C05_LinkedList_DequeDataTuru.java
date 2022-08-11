@@ -13,5 +13,6 @@ public class C05_LinkedList_DequeDataTuru {
         ll4.removeLastOccurrence("Selim");
         System.out.println(ll4); // [Cavidan, Mesut, Selim, Tevfik]
         System.out.println(ll4.pop());
+        //pop linkedlistin basindaki elementi siler ve bize dondurur
     }
 }
