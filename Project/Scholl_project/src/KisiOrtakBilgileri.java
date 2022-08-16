@@ -39,9 +39,9 @@ public class KisiOrtakBilgileri {
     @Override
     public String toString() {
         return
-                "\nAd Soyad     = " + adSoyad +
-                "\nKimlik No    = " + kimlikNo +
-                "\nYas          = " + yas ;
+                "\n  Ad Soyad     = " + adSoyad +
+                "\n  Kimlik No    = " + kimlikNo +
+                "\n  Yas          = " + yas ;
 
     }
 }
