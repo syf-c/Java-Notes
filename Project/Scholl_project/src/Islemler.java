@@ -7,8 +7,9 @@ public class Islemler {
     static List<KisiOrtakBilgileri> ogrenciList = new ArrayList<KisiOrtakBilgileri>();
     static Scanner scan = new Scanner(System.in);
     static String kisiTuru;
+    public static Thread Tread;
 
-    public static void girisPaneli() {
+    public static void girisPaneli() throws InterruptedException {
         System.out.println(Renklendirme.ANSI_GREEN + "====================================" + Renklendirme.ANSI_RESET);
         System.out.println(Renklendirme.ANSI_GREEN_BACKGROUND + Renklendirme.ANSI_BLACK + " OGRENCI VE OGRETMEN YONETIM PANELI " + Renklendirme.ANSI_RESET);
         System.out.println(Renklendirme.ANSI_GREEN + "====================================" + Renklendirme.ANSI_RESET);
@@ -34,7 +35,8 @@ public class Islemler {
                 cikis();
                 break;
             default:
-                System.out.println(Renklendirme.ANSI_YELLOW_BACKGROUND + Renklendirme.ANSI_BLACK + "  Hatali giris yaptiniz  " + Renklendirme.ANSI_RESET);
+                System.out.println(Renklendirme.ANSI_YELLOW_BACKGROUND + Renklendirme.ANSI_BLACK + "        Hatali giris yaptiniz       " + Renklendirme.ANSI_RESET);
+                Tread.sleep(3000);
                 girisPaneli();
                 break;
 
@@ -43,10 +45,12 @@ public class Islemler {
     }
 
     private static void cikis() {
-        System.out.println(Renklendirme.ANSI_BLUE + "Cikisiniz yapilmistir iyi gunler dileriz :) " + Renklendirme.ANSI_RESET);
+        System.out.println(Renklendirme.ANSI_BLACK +Renklendirme.ANSI_YELLOW_BACKGROUND+ "=================================================" + Renklendirme.ANSI_RESET);
+        System.out.println(Renklendirme.ANSI_BLACK +Renklendirme.ANSI_YELLOW_BACKGROUND+ "=  Cikisiniz yapilmistir iyi gunler dileriz :)  =" + Renklendirme.ANSI_RESET);
+        System.out.println(Renklendirme.ANSI_BLACK +Renklendirme.ANSI_YELLOW_BACKGROUND+ "=================================================" + Renklendirme.ANSI_RESET);
     }
 
-    private static void islemMenusu() {
+    private static void islemMenusu() throws InterruptedException {
         System.out.println(Renklendirme.ANSI_GREEN_BACKGROUND + Renklendirme.ANSI_BLACK + "=============  " + kisiTuru + "    ===========" + Renklendirme.ANSI_RESET);
         System.out.println("=============  ISLEMLERI  ===========\n" +
                 "      1-EKLEME\n" +
@@ -71,7 +75,7 @@ public class Islemler {
                 islemMenusu();
                 break;
             case "4":
-                //silme()
+                silme();
                 islemMenusu();
                 break;
             case "5":
@@ -89,19 +93,79 @@ public class Islemler {
         }
     }
 
-    private static void arama() {
+    private static void silme() throws InterruptedException {
         System.out.println(Renklendirme.ANSI_GREEN_BACKGROUND + Renklendirme.ANSI_BLACK + "=============  " + kisiTuru + "    ===========" + Renklendirme.ANSI_RESET);
-        String kimlik_No = scan.nextLine();
-        //if (kimlikNo.equals(kimlik_No))
-
+        boolean flag = true;
+        if (kisiTuru.equalsIgnoreCase("OGRENCI")) {
+            System.out.println("Silmek istediginiz Ogrencinin Kimlik Numarasini giriniz :");
+            String silinecekKimlikNo = scan.next().replaceAll(" ", "");
+            for (KisiOrtakBilgileri w : ogrenciList) {
+                if (w.getKimlikNo().equals(silinecekKimlikNo)) {
+                    System.out.println("Bilgileri Silinen ogrenci : " + w.toString());
+                    ogrenciList.remove(w);
+                    Tread.sleep(3000);
+                    flag = false;
+                    islemMenusu();
+                    break;
+                }
+            }
+            if (flag){
+                System.out.println("Bu kimlik Numarasina ait Ogrenci bulunmamaktadir");
+                Tread.sleep(3000);
+                islemMenusu();
+            }
+        }
     }
 
-    private static void listeleme() {
+    private static void arama() throws InterruptedException {
+        System.out.println(Renklendirme.ANSI_GREEN_BACKGROUND + Renklendirme.ANSI_BLACK + "=============  " + kisiTuru + "    ===========" + Renklendirme.ANSI_RESET);
+        boolean flag = true;
+        if (kisiTuru.equalsIgnoreCase("OGRENCI")) {
+            System.out.println("Aradiginiz ogrencinin kimlik numarasini giriniz :");
+            String kimlik_numarasi = scan.next();
+            for (KisiOrtakBilgileri w : ogrenciList) {
+                if (w.getKimlikNo().equals(kimlik_numarasi)) {
+                    System.out.println("Aradiginiz Ogrenci : "+w.toString());
+                    flag = false;
+                    islemMenusu();
+                    break;
+
+                }
+            }
+            if (flag) {
+                System.out.println("Bu kimlik numarasina ait Ogrenci bulunmamaktadir");
+                Tread.sleep(3000);
+                islemMenusu();
+            }
+        } else {
+
+            System.out.println("Aradiginiz ogretmenin Kimlik numarasini giriniz");
+            String kimlik_numarasi = scan.next().replaceAll(" ","");
+            for (KisiOrtakBilgileri w : ogretmenList) {
+                if (w.getKimlikNo().equals(kimlik_numarasi)) {
+                    System.out.println("Aradiginiz Ogretmen : " +w.toString());
+                    Tread.sleep(3000);
+                    flag = false;
+                    islemMenusu();
+                    break;
+                }
+            }
+            if (flag) {
+                System.out.println("Bu kimlik numarasina ait Ogretmen bulunmamaktadir");
+                Tread.sleep(3000);
+                islemMenusu();
+            }
+        }
+    }
+
+    private static void listeleme() throws InterruptedException {
         System.out.println(Renklendirme.ANSI_GREEN_BACKGROUND + Renklendirme.ANSI_BLACK + "=============  " + kisiTuru + "    ===========" + Renklendirme.ANSI_RESET);
         if (kisiTuru.equalsIgnoreCase("OGRENCI")) {
             System.out.println(ogrenciList);
+            Tread.sleep(3000);
         } else {
             System.out.println(ogretmenList);
+            Tread.sleep(3000);
         }
     }
 
