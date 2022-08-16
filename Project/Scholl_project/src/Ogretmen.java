@@ -29,9 +29,9 @@ public class Ogretmen extends KisiOrtakBilgileri{
 
     @Override
     public String toString() {
-        return  "OGRETMEN BILGILERI"
+        return  "\nOGRETMEN BILGILERI"
                 +super.toString()+
-                "\nBolum    = " + bolum +
-                "\nSicil No = " + sicilNo ;
+                "\n  Bolum    = " + bolum +
+                "\n  Sicil No = " + sicilNo ;
     }
 }
