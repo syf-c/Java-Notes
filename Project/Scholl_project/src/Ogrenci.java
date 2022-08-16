@@ -31,9 +31,9 @@ public class Ogrenci extends KisiOrtakBilgileri {
 
     @Override
     public String toString() {
-        return  "OGRENCI BILGILERI"
+        return  "\nOGRENCI BILGILERI"
                 +super.toString()+
-                "\nOgrenci No   = " + ogrenciNo +
-                "\nSinif        = " + sinif ;
+                "\n  Ogrenci No   = " + ogrenciNo +
+                "\n  Sinif        = " + sinif ;
     }
 }
