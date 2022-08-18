@@ -36,6 +36,10 @@ public class Fp01 {
         System.out.println();//dummy
         tekElemanlarinKareleriniYazdirfunctional(liste);
         System.out.println();//dummy
+        tekrarsizTekElemanlarinKupunuYazdir(liste);
+        System.out.println();//dummy
+        tekrarsizCiftElemanlarinKareToplami(liste);
+        System.out.println();//dummy
 
 
     }
@@ -74,6 +78,21 @@ public class Fp01 {
     }
     private static void tekElemanlarinKareleriniYazdirfunctional(List<Integer> liste) {
         liste.stream().filter(t->t%2!=0).map(t->t*t).forEach(t-> System.out.print(t+" ")); //elemanların değerleri değişecekse map() methodu kullanılır.
+    }
+
+    //4) Ardışık tek list elementlerinin küplerini tekrarsız olarak aynı satırda aralarında boşluk bırakarak yazdıran bir method oluşturun.
+    public static void tekrarsizTekElemanlarinKupunuYazdir(List<Integer> list) {
+        list.stream().distinct().filter(t -> t % 2 != 0).map(t -> t * t * t).forEach(t -> System.out.print(t + " "));
+    }
+
+    //5) Tekrarsız çift elemanların karelerinin toplamını hesaplayan bir method oluşturun.
+
+    public static void tekrarsizCiftElemanlarinKareToplami(List<Integer> list){
+
+        Integer toplam = list.stream().distinct().filter(t->t%2==0).map(t->t*t).reduce(0,(t,u)->t+u);
+
+        System.out.println(toplam);
+
     }
 
 }
