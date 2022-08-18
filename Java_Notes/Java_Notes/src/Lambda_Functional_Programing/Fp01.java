@@ -31,13 +31,14 @@ public class Fp01 {
         ciftElemanlariYazdirScructured(liste);
         System.out.println();//dummy
         ciftElemanlariYazdirFunctional(liste);
-
-
+        System.out.println();//dummy
+        tekElemanlarinKareleriniYazdirScructured(liste);
+        System.out.println();//dummy
+        tekElemanlarinKareleriniYazdirfunctional(liste);
+        System.out.println();//dummy
 
 
     }
-
-
 
     //1)Ardışık list elementlerini aynı satırda aralarında boşluk bırakarak yazdıran bir method oluşturun.(Functional)
 
@@ -62,4 +63,17 @@ public class Fp01 {
     private static void ciftElemanlariYazdirFunctional(List<Integer> liste) {
         liste.stream().filter(t->t%2==0).forEach(t-> System.out.print(t+" "));
     }
+
+    //3) Ardışık tek list elemanlarının karelerini aynı satırda aralarında boşluk bırakarak yazdıran bir method oluşturun.(Functional)
+    private static void tekElemanlarinKareleriniYazdirScructured(List<Integer> liste) {
+        for (Integer w : liste) {
+            if (w%2!=0){
+                System.out.print(w +" ");
+            }
+        }
+    }
+    private static void tekElemanlarinKareleriniYazdirfunctional(List<Integer> liste) {
+        liste.stream().filter(t->t%2!=0).map(t->t*t).forEach(t-> System.out.print(t+" ")); //elemanların değerleri değişecekse map() methodu kullanılır.
+    }
+
 }
