@@ -40,6 +40,7 @@ public class Fp01 {
         System.out.println();//dummy
         tekrarsizCiftElemanlarinKareToplami(liste);
         System.out.println();//dummy
+        tekrarsizCiftElemanlerinKupununCarpimi(liste);
 
 
     }
@@ -86,13 +87,14 @@ public class Fp01 {
     }
 
     //5) Tekrarsız çift elemanların karelerinin toplamını hesaplayan bir method oluşturun.
-
     public static void tekrarsizCiftElemanlarinKareToplami(List<Integer> list){
-
         Integer toplam = list.stream().distinct().filter(t->t%2==0).map(t->t*t).reduce(0,(t,u)->t+u);
-
         System.out.println(toplam);
-
+    }
+    //6) Tekrarsiz cift elemanlerin kupunun carpimini hesaplayan bir method olusturun.
+    public static void tekrarsizCiftElemanlerinKupununCarpimi(List<Integer> list){
+        Integer carpim = list.stream().distinct().filter(t -> t % 2==0).map(t -> t*t*t).reduce(1,(t,u)->t*u);
+        System.out.println(carpim);
     }
 
 }
