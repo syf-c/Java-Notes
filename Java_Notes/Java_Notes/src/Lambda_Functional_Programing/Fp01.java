@@ -133,7 +133,7 @@ public class Fp01 {
     }
 
     public static void enkucukeleman02(List<Integer> list) {
-        Integer min = list.stream().distinct().sorted(Comparator.reverseOrder()).reduce(Integer.MAX_VALUE, (t, u) -> u);
+        Integer min = list.stream().distinct().sorted(Comparator.reverseOrder()).reduce(Math::min).get();
         System.out.println("En kucuk eleman : " + min);
     }
 
