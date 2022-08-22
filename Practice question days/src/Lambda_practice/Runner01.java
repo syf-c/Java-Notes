@@ -8,6 +8,7 @@ public class Runner01 extends Lambda01 {
         System.out.println("**************************");
         System.out.println("Tum Elemanlarin Toplami : "+tumElemanlarinToplami(numbers));
         System.out.println("**************************");
+        ciftElemanlarinCarpimi(numbers);
         System.out.println("**************************");
         System.out.println("**************************");
 
