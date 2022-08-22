@@ -45,7 +45,11 @@ public class Lambda01 {
 
     }
 
-    //Listedeki cift elemanlarin carpimi
+    //Listedeki cift elemanlarin carpimi yaziniz
+
+    public static void ciftElemanlarinCarpimi(List<Integer> list){
+        System.out.println("cift Elemanlar = " + list.stream().distinct().filter(Methodlarim::ciftElemaniBul).reduce(Math::multiplyExact).get());
+    }
 
 
 
