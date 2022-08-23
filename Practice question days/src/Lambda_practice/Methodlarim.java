@@ -6,7 +6,7 @@ public class Methodlarim { //seed(tohum) methodlar create edildi
     }
 
     public static void yazdir(Object obj){
-        System.out.print(obj +" ");
+        System.out.println(obj +" ");
     }
 
 }
