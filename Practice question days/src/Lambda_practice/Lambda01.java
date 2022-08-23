@@ -133,5 +133,7 @@ kullanılabilir.
 */
     //TODO Task : list elemanlarini son harfine göre siralayıp ilk eleman hariç kalan elemanlari print ediniz.
     public static void sonHarfeGoreSiralaIlkHaricElmanlariYaz(List<String> yemek) {
+      Stream<String>sonuc= yemek.stream().sorted(Comparator.comparing(t->t.toString().length()-1)).skip(1);
+        System.out.println(Arrays.toString(sonuc.toArray()));
     }
 }
