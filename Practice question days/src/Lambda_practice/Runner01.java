@@ -20,6 +20,7 @@ public class Runner01 extends Lambda01 {
         xIleBitenEleman(menu);
         System.out.println();
         karkterEnFazla(menu);
+        sonHarfeGoreSiralaIlkHaricElmanlariYaz(menu);
 
     }
 }
