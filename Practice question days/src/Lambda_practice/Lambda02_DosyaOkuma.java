@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 /*
 dosya eklemek icin 2 yol var
 1) Files.lines(Path.of("path")  buradan stream e eklemek icin
@@ -23,10 +24,26 @@ cevirirken EXCEPTION OLUSMASIN DIYE => throws IOException <= EKLEMELIYIZ
 buda lines altinda kirmizi uyari veriyor uzerine tiklayinca kendiliginden oluyor
 */
 public class Lambda02_DosyaOkuma {// yolu src/lambda_practice/siirler.txt
+
+    //src/Lambda_practice/siirler.txt
     public static void main(String[] args) throws IOException {
         System.out.println("\nTASK 01 --> siirler.txt dosyasini okuyunuz -->  ");
+        Path muti = Path.of("src/Lambda_practice/siirler.txt");
+        Stream<String> akis=Files.lines(muti);
+       // akis.forEach(System.out::println);
+
+        //buyuk harfe cevirdil
+        akis.map(String::toUpperCase).forEach(System.out::println);
+
+        //2.yoll
+        Files.lines(Path.of("src/Lambda_practice/siirler.txt")).forEach(Methodlarim::yazdir);
+
         System.out.println("\nTASK 1  --> siirler.txt dosyasindaki ilk satiri kucuk harflerle yazdirin  -->  ");
+
+
         System.out.println("\nTASK 2 --> siirler.txt dosyasinda basari kelimesinin kac satirda gectiginiz yazdiriniz -->  ");
+
+
         System.out.println("\nTASK 3  --> siirler.txt dosyasindaki ayni kelimeleri cikartarak y yazdiriniz. -->  ");
         System.out.println("\nTASK 4 --> siirler.txt dosyasindaki tum kelimeleri natural order  yazdiriniz. -->  ");
         System.out.println("\nTASK 5 --> siirler.txt dosyasinda basari kelimesinin kac kere gectigini  yazdiriniz. -->  ");
