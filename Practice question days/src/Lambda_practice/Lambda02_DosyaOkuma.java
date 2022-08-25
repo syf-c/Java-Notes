@@ -65,7 +65,11 @@ public class Lambda02_DosyaOkuma {// yolu src/lambda_practice/siirler.txt
 
         System.out.println("\nTASK 8 --> siirler.txt dosyasinda kac /farklı harf kullanildigini  yazdiriniz. -->  ");
         System.out.println(Files.lines(muti).map(t -> t.replaceAll("\\W", "").split("")).flatMap(Arrays::stream).distinct().count());
+
         System.out.println("\nTASK 9 --> siirler.txt dosyasinda kac farkli kelime kullanildiginin sayisini  yazdiriniz. -->  ");
+        System.out.println(Files.lines(muti).map(String::toLowerCase).map(t -> t.split(" ")).flatMap(Arrays::stream).distinct().count());
+
         System.out.println("\nTASK 10 --> siirler.txt dosyasinda kac farkli kelime kullanildigini  yazdiriniz. -->  ");
+        Files.lines(muti).map(String::toLowerCase).map(t -> t.split(" ")).flatMap(Arrays::stream).distinct().forEach(Methodlarim::yazdir);
     }
 }
