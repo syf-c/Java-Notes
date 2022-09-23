@@ -11,6 +11,7 @@ public class C02_IfStetament {
         }
         if (sayi%5==0){
             System.out.println("sayi 5'e tam bolunur");
+
         }
         /*
         basit if cumleleri kodun diger parcalaarindan bagimsizdir
