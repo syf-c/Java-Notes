@@ -13,6 +13,7 @@ public class C03_Ifstatement {
             System.out.println("sayi pozitif"); //degere bagli
             System.out.println("pozitif kalacaktir");//her zaman calisir
 
+
         if (sayi % 2 == 0)
             System.out.println("sayi cift");//degere bagli
             System.out.println("cift kalacaktir");//her zaman calisir
